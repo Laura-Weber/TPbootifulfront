@@ -53,9 +53,11 @@ export class AppComponent implements OnInit, OnChanges {
   }
 
   ngOnInit() {
-    this._appService.get().subscribe((num: number) => this._number = num);
     console.log('aaaaa');
-    console.log('aaaaa' + this._number);
+    this._appService.getOne().subscribe((num: number) => {
+      this._number = 1;
+      console.log('cccc  ' + this._number);
+    });
   }
 
   ngOnChanges(record) {

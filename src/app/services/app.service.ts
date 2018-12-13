@@ -28,7 +28,7 @@ export class AppService {
   /**
    * Return the value of the int to add on
    */
-  get(): Observable<number> {
+  getOne(): Observable<number> {
     console.log('bbbbbb');
     return this._http.get<number>(this._backendURL.current)
       .pipe(filter(_ => !!_), defaultIfEmpty(0));
